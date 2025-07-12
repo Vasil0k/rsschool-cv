@@ -1,0 +1,202 @@
+:root {
+    --main-bg: #f4f4f4;
+    --accent: #6c757d; /* Modern grey */
+    --text: #222;
+    --card-bg: #fff;
+    --border: #d1d5db;
+}
+
+body {
+    background: var(--main-bg);
+    color: var(--text);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    min-height: 100vh;
+}
+
+header, main, footer {
+    max-width: 900px;
+    margin: 0 auto;
+    box-sizing: border-box;
+}
+
+header {
+    background: var(--card-bg);
+    border-radius: 0 0 12px 12px;
+    padding: 2rem 2rem 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.avatar {
+    width: 180px; /* Larger avatar */
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid var(--accent);
+    background: #eaeaea;
+}
+
+header div {
+    flex: 1;
+}
+
+h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: 2.2rem;
+    color: var(--accent);
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--accent);
+    text-decoration: none;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+main {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    margin: 2rem auto 1rem auto;
+}
+
+h2 {
+    color: var(--accent);
+    margin-top: 0;
+    margin-bottom: 0.7rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.2rem;
+}
+
+ul, ol {
+    margin: 0.5rem 0 0.5rem 1.5rem;
+}
+
+/*#contacts ul, #skills ul {
+    list-style: disc inside;
+}*/
+
+#contacts li, #skills li {
+    margin-bottom: 0.2rem;
+}
+
+.experience-list, .education-list {
+    list-style: none;
+    padding: 0;
+}
+
+.experience-list li, .education-list li {
+    margin-bottom: 1rem;
+}
+
+.job-title {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+.company {
+    font-style: italic;
+    color: #555;
+}
+
+.job-dates {
+    color: #888;
+    font-size: 0.98em;
+}
+
+.code-sample {
+    background: #f4f4f4;
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    padding: 1rem;
+    font-family: monospace;
+    font-size: 0.98rem;
+    overflow-x: auto;
+    margin: 0.5rem 0;
+}
+
+.projects-list {
+    list-style: disc inside;
+    margin-left: 1.5rem;
+}
+
+.lang-level {
+    font-weight: bold;
+    color: var(--accent);
+}
+
+footer {
+    background: var(--card-bg);
+    border-radius: 12px 12px 0 0;
+    padding: 1.2rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 1rem;
+    margin-bottom: 2rem;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.footer-links {
+    display: flex;
+    align-items: center;
+    gap: 1.2rem;
+}
+
+.footer-links a {
+    color: var(--accent);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.footer-links a:hover {
+    text-decoration: underline;
+}
+
+.footer-img {
+    height: 28px;
+    vertical-align: middle;
+}
+
+@media (max-width: 700px) {
+    header, main, footer {
+        padding-left: 0.5rem;
+        padding-right: 0.5rem;
+    }
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+    .avatar {
+        width: 120px;
+        height: 120px;
+    }
+}
+@media (max-width: 500px) {
+    main {
+        padding: 1rem;
+    }
+    footer {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+    }
+}
